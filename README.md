@@ -121,3 +121,4 @@ Lets say chat.answerBot = 'ok' and when I import the function I can easily call 
 * add a database -  log user coldtime 
 * Make the bot understadn 'leet talk'  ex.: H3ll0
 * Remove jquery cdn from html :D
+* Try  implementing sentiment analysis
