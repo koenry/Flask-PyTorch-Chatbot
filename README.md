@@ -1,6 +1,13 @@
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/github.com/koenry/FlaskPyTorchChatbot) 
+[![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=darkgreen)](https://www.python.org/)
+[![Torch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white)](https://pytorch.org/)
+[![Numpy](https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/en/2.0.x/)
+[![JS](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![CAO](https://codeacademy.lt/wp-content/themes/codeacademy/dist/images/codeacademy-black.svg)](https://codeacademy.lt/)
 # ChatBot (ALPHA version 0.2)
 
-  My final project for [CodeAcademy LT](https://codeacademy.lt/) programming course. A trained chatbot model with pytorch and flask.
+  My final project for [CodeAcademyLT](https://codeacademy.lt/)   programming course. A trained chatbot model with pytorch and flask.
 
 # Table of Contents
 1. [The Plan](#The-Plan)
