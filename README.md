@@ -13,10 +13,10 @@
 8. [Future Roadmap](#Future-Roadmap)
 
 # The Plan:
-1. Learn various NLP concepts stemming tokenization bag of words
+1. Learn various NLP concepts: Stemming, Tokenization, Bag of words
 2. Create train data
-3. Create a pytorch model train the model
-4. Save load model and implement the chat
+3. Create a pytorch model and train the model
+4. Save and load the model and implement the chat
 5. Implement front-end
 6. Fix bugs and Refactor the code
 7. Enable CORS policy, create a dockerfile for the server build
@@ -33,7 +33,8 @@
  * Bag Of Words - is a representation of text that describes the occurrence of words within a document. (intents.json)
 These are called ``` (NLP) - Neuro-linguistic programming ```  techniques  
 * Lower all the words and exclude special characters
-
+* Compare with Bag of words (intents.json)
+* Calculate the probability - x vector
 
 # The Model
 input =>  'is anYone thErE?' \
@@ -53,8 +54,8 @@ bag of words (intents.json) =>  ```'is' 'anyon' 'there'```        intents.json``
   for each different pattern 
   if this word is included in the pattern 
   we put a 1 or 0 otherwise
-  Patterns hi how are you > greeting
-bye see you later > goodbye
+  Patterns: ```hi how are you``` => greeting
+```bye see you later``` => goodbye
 
 
 # Intents
@@ -68,8 +69,8 @@ bye see you later > goodbye
 
 
 ### We get the x  vector and it calculates which 'tag' is correct is it a greeting? a goodbye? a specific question?
-Of course we might not get an answer we want because its not in our intents.json so if lets say the probabality less than 0.75 we use duckduckgo API to search the web for an answer
-If the user types in 'Keanu Reeves' gives us a summary that its an actor. So the bot pretty much haves an answer to any user input.
+Of course we might not get an answer we want because its not in our intents.json so if lets say the probabality is less than 0.75 we use duckduckgo API to search the web for an answer
+If the user types in 'Keanu Reeves' it gives us a summary that its an actor. So the bot pretty much haves an answer to any user input.
 
 # Requirements
 ```pip install nltk``` \
@@ -78,15 +79,17 @@ If the user types in 'Keanu Reeves' gives us a summary that its an actor. So the
 ```pip install flask``` \
 ```pip install flask-cors``` \
 ```pip install requests``` \
-note: you might need to ```import nltk.download('punkt')``` its a tokenizer package inside train.py, its commented out but you might need it to manually download it you need to run it only once.
+note: you might need to ```import nltk.download('punkt')``` its a tokenizer package inside train.py, its commented out but you might need it to manually* download it you need to run it only once. *By mnually I mean to uncomment and run the train data once afterwards you can comment it out.
 
 # Usage
-* Download the code
+* Download the code \
+![image](https://user-images.githubusercontent.com/68077710/149556782-c6cf4e8a-2072-4a0f-bb45-004994115858.png)
+
 * pip install -r requirements.txt ( in the shell )
 ![image](https://user-images.githubusercontent.com/68077710/149461757-7c18885d-697d-4abc-be51-78eaf21dda27.png)
 
-* run train.py this will train your data and save it to pickle file for your model.py to use
-* ![image](https://user-images.githubusercontent.com/68077710/149461833-94c26e44-2715-4d43-b1db-0c3979b4ddd6.png)
+* run train.py this will train your data and save it to pickle file for your model.py to use \
+ ![image](https://user-images.githubusercontent.com/68077710/149461833-94c26e44-2715-4d43-b1db-0c3979b4ddd6.png)
 
 * run run.py to start the development server \
  ![image](https://user-images.githubusercontent.com/68077710/149461870-428c4bf5-f3b0-4568-9589-915afc1827e1.png)
@@ -96,23 +99,19 @@ note: you might need to ```import nltk.download('punkt')``` its a tokenizer pack
 ![image](https://user-images.githubusercontent.com/68077710/149461951-b7b1e300-d359-4866-a21a-1fd3b07045d4.png) \
 ```p.s. the front-end design is still in early alpha```
 
-
 ### Quick Notes
-* You can always use your own intents.json and run train.py (just delete the data pickle file from the root the app )
-* This is an open source project so you can use it anywhere you want
+* You can always use your own intents.json and run train.py (just delete the data pickle file from the root folder if you ran train.py )
+* This is an open source project so you can use it anywhere you want \
 
 # Author Notes
- Learned the proper way how to import functions and not use one .py file for everything
-One of the best helping hand was: I Learned that  Everything in python is considered as object so functions are also objects. So you can use this method as well.
-lets say chat.answerBot = 'ok' and when i  import the function I can easily say if chat.answerBot or local scope variables can be objects and mix and match inside other functions easily.
-
-Learned how back-end and front-end communicates via GET and/or POST requests
-Started using f strings for better readabiltiy of concat strings.
+*I Learned the proper way how to import functions and not use one .py file for everything 
+* One of the best helping hand was: ```I Learned that  Everything in python is considered as object so functions are also objects.``` So you can use this method as well.
+Lets say chat.answerBot = 'ok' and when I import the function I can easily call it chat.answerBot or we can even call local scope variables this is where OOP really shines.
+* Learned how back-end and front-end communicates via GET and/or POST requests.
+* Started using f strings for better readabiltiy of concat strings.
+* Read more about machine learning and how an AI is trained
 
 # Future Roadmap
-
-
-
 
 * update intents.json
 * dockerimage for back-end server
@@ -121,3 +120,4 @@ Started using f strings for better readabiltiy of concat strings.
 * add duckduckgo API functions so the chatbot always has an answer to a question or statement
 * add a database -  log user coldtime 
 * Make the bot understadn 'leet talk'  ex.: H3ll0
+* Remove jquery cdn from html :D
