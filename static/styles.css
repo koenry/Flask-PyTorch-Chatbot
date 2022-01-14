@@ -1,0 +1,52 @@
+body {
+  background-color: #D3DEDC;
+}
+.bot{
+  color: black;
+  text-align: center;
+  background-color: indianred;
+  margin-right: 250px;
+  margin-left: 250px;
+}
+.you{
+  color: black;
+  background-color: gray;
+  background-size: 5px;
+  text-align: center;
+  margin-right: 250px;
+  margin-left: 250px;
+
+}
+
+
+.container {
+  background-color: #7C99AC;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#box {
+
+  background-color: lightgrey;
+  width: auto;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 40px;
+  text-align: center;
+  justify-content: center;
+
+}
+.chatElements {
+  display: flex;
+  background-size: 5555px;
+
+}
+
+.gridItem{
+  padding: 1px;
+  margin-bottom: px;
+  
+  text-align: center;
+}
