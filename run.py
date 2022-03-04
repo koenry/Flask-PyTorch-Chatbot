@@ -1,5 +1,5 @@
 from flask import Flask, render_template, flash, request, jsonify, json
-import json, requests,  sqlite3
+import json, requests,  sqlite3, random
 from datetime import datetime
 from urllib.parse import quote
 from numpy import *
@@ -10,6 +10,7 @@ from flask_cors import CORS, cross_origin
 
 
 
+arrayOfWrongChoices = ["Might need to rephrase that", "Hey I know the answer to this! 42304... No ?", "Try asking something else", "How about NO"]
 
 app = Flask(__name__)
 CORS(app, support_credentials=True)
@@ -47,22 +48,27 @@ def pyData():
         url = requests.get(f'https://api.duckduckgo.com/?q={sentence}&format=json&pretty=1')
         text = url.text
         y = json.loads(text)
-        if (y["Abstract"] == ""):
-            con = sqlite3.connect('ChatBot.db')
-            cur = con.cursor()
-            cur.execute("insert into Chatbot values(?,?,?)",(date, sentence, 'F')) 
-            con.commit()
-            con.close()
-            return json.dumps("duckduckGo says: "+y["RelatedTopics"][0]["Text"])
-        else:
-            con = sqlite3.connect('ChatBot.db')
-            cur = con.cursor()
-            cur.execute("insert into Chatbot values(?,?,?)",(date, sentence, 'F')) 
-            con.commit()
-            con.close()
-            con.commit()
-            con.close()
-            return json.dumps("duckduckGo says: "+y["Abstract"])
+        try:
+            if (y["Abstract"] == ""):
+                con = sqlite3.connect('ChatBot.db')
+                cur = con.cursor()
+                cur.execute("insert into Chatbot values(?,?,?)",(date, sentence, 'F')) 
+                con.commit()
+                con.close()
+                return json.dumps("duckduckGo says: "+y["RelatedTopics"][0]["Text"])
+            else:
+                con = sqlite3.connect('ChatBot.db')
+                cur = con.cursor()
+                cur.execute("insert into Chatbot values(?,?,?)",(date, sentence, 'F')) 
+                con.commit()
+                con.close()
+                con.commit()
+                con.close()
+                return json.dumps("duckduckGo says: "+y["Abstract"])
+        
+        except IndexError:
+            return json.dumps(random.choice(arrayOfWrongChoices))
+            
 
         
 

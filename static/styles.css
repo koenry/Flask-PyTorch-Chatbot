@@ -44,14 +44,16 @@ body {
   color: greenyellow;
  }
 
-
+ a:hover {
+  color: purple;
+}
  .animation{
   color: gold; 
   font-size: 36px;
   white-space: nowrap;
   overflow: hidden;
   font-family: 'BhuTuka Expanded One', cursive;
-  animation: type 1s steps(60, end); 
+  animation: type 0.5s steps(60, end); 
 }
 
 
@@ -61,14 +63,15 @@ body {
   font-size: 24px;
   white-space: nowrap;
   overflow: hidden;
-  animation: type 2s steps(60, end); 
+  animation: type 2.5s steps(60, end); 
+  text-decoration: none;
 }
 .animation3{
   color: gold; 
   font-family: 'BhuTuka Expanded One', cursive;
   font-size: 20px;
   overflow: hidden;
-  animation: type 3s steps(120, end); 
+  animation: type 3.5s steps(120, end); 
 }
 
 @keyframes type{ 
