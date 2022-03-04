@@ -20,9 +20,15 @@ document.addEventListener('keypress', function(event) {
     document.getElementById('box').appendChild(para);
         
     const para2 = document.createElement('p');
+    para2.className = "bot";
     const tb = document.createTextNode(data);
     para2.appendChild(tb);
     document.getElementById('box').appendChild(para2);
+    document.getElementById('textInput').value = ''
+   
+    window.scrollTo(0,document.body.scrollHeight);
+    
+    
   });
 }  
   })

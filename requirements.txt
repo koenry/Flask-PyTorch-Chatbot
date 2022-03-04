@@ -1,6 +1,7 @@
-pip install nltk
-pip install numpy
-pip install torch
-pip install flask
-pip install requests
-pip install flask-cors    
+nltk
+numpy
+torch
+flask
+requests
+flask-cors    
+sqlite3

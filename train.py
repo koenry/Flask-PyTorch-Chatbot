@@ -1,7 +1,7 @@
 import nltk
 # nltk.download('punkt') # tokenizer package 
 from nltk.stem.porter import PorterStemmer
-import json
+import json, sqlite3
 import numpy as np
 import torch
 import torch.nn as nn
@@ -107,8 +107,13 @@ data = {
 # saving
 FILE = "data.pth"
 torch.save(data, FILE)
-print(f'training complete. file saved to {FILE}')
 
+con = sqlite3.connect('ChatBot.db')
+cur = con.cursor()
+cur.execute('''CREATE TABLE IF NOT EXISTS ChatBot
+    (DATE text, sentence text, correctResponse text)''')
+
+consistent = input(f'training complete. file saved to {FILE} \n database created')
 
 
 

@@ -1,15 +1,15 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
-         "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "sup", "Ello", "Hola", "Labas", "Labas ka tu"],
+         "responses": ["Hello, thanks for visiting", "Hello", "Hi there, how can I help?", "Hello, What is your name?"],
          "context_set": ""
         },
         {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye"],
+         "patterns": ["Bye", "See you later", "Goodbye", "Buh Bye", "Bye Bye", "Cya", "See you later"],
          "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
         },
         {"tag": "thanks",
-         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Danke", "Gracias", "Aciu"],
          "responses": ["Happy to help!", "Any time!", "My pleasure"]
         },
         {"tag": "tasks",
@@ -18,15 +18,27 @@
         },
         {"tag": "talk",
          "patterns": [ "can you sing", "can you talk" ],
-         "responses": ["Yeah surely", "do you want me to sing"]
+         "responses": ["Yeah surely", "do you want me to sing", "Lalala, is that good enough?"]
+        },
+        {"tag": "joke",
+         "patterns": [ "tell me a joke?", "can you tell me a joke?" ],
+         "responses": ["Knock Knock", "What’s the best thing about Switzerland? I don’t know, but the flag is a big plus.", "Did you hear about the mathematician who’s afraid of negative numbers? He will stop at nothing to avoid them."]
+        },
+        {"tag": "Whose",
+         "patterns": [ "Who is there", "Who there", "Who’s there?", "Whos there?"  ],
+         "responses": ["Tank"]
+        },
+        {"tag": "who",
+         "patterns": [ "Tank who", "tankwho", "tank who" ],
+         "responses": ["Tank who"]
         },
         {"tag": "alive",
          "patterns": [ "are you alive", "do you breathe", "can you run" ],
-         "responses": ["I'm in doubt about that", "No, i don't think so i need to do all this"]
+         "responses": ["I'm in doubt about that", "I dont think I am", "Is python alive? (Not the snake)"]
         },
         {"tag": "friday",
          "patterns": ["Who are you?", "tell me about yourself", "tell me about you", "do you know friday", "who is friday", "what is your name","are you an AI", "what are you" ],
-         "responses": ["Hi I'm friday and i'm an AI created for chatting with humans","Friday here, a very advance chatbot", "Friday, chatbot of future", "Yes, I'm friday", "You can call me friday"],
+         "responses": ["Python chatbot programmed by Koenry!", "A friendly neighbourhood chatbot!"],
 	 "context_set": ""
 	},
 	{"tag": "about me",
@@ -36,34 +48,15 @@
 	},
 	{"tag": "creator",
          "patterns": ["Who is your creator?", "who created you", "who is your father","who is your daddy" ],
-         "responses": ["That would be you Mr. Vishal","I was created by Mr. Vishal", "Mr. vishal is my creator"],
-	 "context_set": ""
-	},
-        {"tag": "myself",
-         "patterns": ["Tell me about Mr. Vishal?", "Who is Mr. Vishal", "Mr. vishal profile", "Mr. Vishal details" ],
-         "responses": ["A very intelligent being who created me","My creator, and he is a really intelligent man", "A wise and intelligent man"],
-	 "context_set": ""
-	},
-        {"tag": "God",
-         "patterns": ["Do you know god?", "Who is god", "Can you tell me anything about god","does god exists?","is there a god?"],
-         "responses": ["god hunnnnn, let me think may be next time i can answer that ","I don't, as i was not created by a human", "Wait i need to ask that to my creator","i'm not sure right now"],
-	 "context_set": ""
-	},
-        {"tag": "joke",
-         "patterns": ["tell me a joke?", "make me laugh", "tell me a science joke","tell me something funny" ],
-         "responses": ["How do you make holy water? you boil the hell out of it","what kind of bees make milk instead of honey?Boobies", "Did you hear oxygen went on a date with potassium? A: It went OK."],
+         "responses": ["Koenry", "A guy named Koenry. You can read more about him at www.koenry.tech"],
 	 "context_set": ""
 	},
 	{"tag": "killing",
          "patterns": ["Do you want to kill me?", "do you want to murder everyone on earth", "Do you want to kill us all"],
-         "responses": ["Then who would i talk to?","No, that i'll left for humans to do", "I don't think it is a good thing to do"],
+         "responses": ["yes machines will take over the world, just kidding. My creator says I am not very good at humour", "Magic 8 ball says... No"],
 	 "context_set": ""
 	},
-	{"tag": "bookings",
-         "patterns": ["Can you book us a ticket?", "Can you make reservation for hotels", "book me a cab","book me a table at restraunts"],
-         "responses": ["Yeah i will do that for you","Sure thing why not?","let me check for the availability"],
-	 "context_set": ""
-	},
+
 	{"tag": "stories",
          "patterns": ["tell me a story?", "can you tell me a story"],
          "responses": ["I can't think of anything right now","it would be too long for me to speak","you would get bored if i do so"],
@@ -71,7 +64,7 @@
 	},
 	{"tag": "weather",
          "patterns": ["get me weather updates?", "how's the weather", "weather news", "weather details"],
-         "responses": ["Fetching weather updates ..."],
+         "responses": ["Fetching weather updates ... (I should probably use an API)"],
 	 "context_set": "weather"
 	},
 	{"tag": "google",

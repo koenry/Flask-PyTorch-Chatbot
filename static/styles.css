@@ -1,52 +1,109 @@
 body {
-  background-color: #D3DEDC;
-}
-.bot{
-  color: black;
-  text-align: center;
-  background-color: indianred;
-  margin-right: 250px;
-  margin-left: 250px;
-}
-.you{
-  color: black;
-  background-color: gray;
-  background-size: 5px;
-  text-align: center;
-  margin-right: 250px;
-  margin-left: 250px;
-
-}
-
-
-.container {
-  background-color: #7C99AC;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+  background-color: black;
+  
 }
 
 #box {
 
-  background-color: lightgrey;
   width: auto;
-  border: 15px solid green;
-  padding: 50px;
-  margin: 40px;
+  height: auto;
+  scrollbar-color: black;
   text-align: center;
   justify-content: center;
-
-}
-.chatElements {
-  display: flex;
-  background-size: 5555px;
-
-}
-
-.gridItem{
-  padding: 1px;
-  margin-bottom: px;
+  font-family: 'BhuTuka Expanded One', cursive;
+  background-color: black;
+  font-size: 24px;
   
+ 
+}
+.gridItem{
+  position: fixed;
+  bottom: 20px;
+  bottom: 0;
+  width: 100%;
   text-align: center;
+  
+}
+
+
+ input {
+  background-color: black;
+  caret-color: greenyellow;
+  color: greenyellow;
+  border-color: black;
+  outline-width: 0;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 1950px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+ }
+
+ p {
+  color: greenyellow;
+ }
+
+
+ .animation{
+  color: gold; 
+  font-size: 36px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'BhuTuka Expanded One', cursive;
+  animation: type 1s steps(60, end); 
+}
+
+
+.animation2{
+  color: gold;  
+  font-family: 'BhuTuka Expanded One', cursive;
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type 2s steps(60, end); 
+}
+.animation3{
+  color: gold; 
+  font-family: 'BhuTuka Expanded One', cursive;
+  font-size: 20px;
+  overflow: hidden;
+  animation: type 3s steps(120, end); 
+}
+
+@keyframes type{ 
+  from { opacity: 0; }
+    to   { opacity: 1; } 
+} 
+
+.bot {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  font-family: 'BhuTuka Expanded One', cursive;
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  white-space: initial; 
+  animation: type 1s steps(60, end); 
+  
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+
+@media (max-width: 580px) {
+  #box {
+   
+  width: auto;
+  height: auto;
+  scrollbar-color: black;
+  text-align: center;
+  justify-content: center;
+  font-family: 'BhuTuka Expanded One', cursive;
+  background-color: black;
+  font-size: 16px;
+  }
 }
