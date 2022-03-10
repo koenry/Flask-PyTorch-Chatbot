@@ -76,7 +76,7 @@ def pyData():
             return json.dumps(random.choice(arrayOfWrongChoices))
             
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(host='0.0.0.0' debug = True)
    
 
 
