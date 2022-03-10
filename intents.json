@@ -14,7 +14,7 @@
         },
         {"tag": "tasks",
          "patterns": ["What can you do?", "What are your features?", "What are you abilities", "can you sing", "can you talk" ],
-         "responses": ["I can do whatever you asks me to do", "I can talk and do things for you", "Right now i'm in developing stage as soon i'm developed, I can do everything"]
+         "responses": ["I can do whatever you ask me to do", "I can talk and do things for you", "Right now i'm in developing stage as soon i'm developed, I can do everything"]
         },
         {"tag": "talk",
          "patterns": [ "can you sing", "can you talk" ],
@@ -22,21 +22,21 @@
         },
         {"tag": "joke",
          "patterns": [ "tell me a joke?", "can you tell me a joke?" ],
-         "responses": ["Knock Knock", "What’s the best thing about Switzerland? I don’t know, but the flag is a big plus.", "Did you hear about the mathematician who’s afraid of negative numbers? He will stop at nothing to avoid them."]
+         "responses": ["Knock Knock", "Whats the best thing about Switzerland? I dont know, but the flag is a big plus.", "Did you hear about the mathematician whos afraid of negative numbers? He will stop at nothing to avoid them."]
         },
         {"tag": "Whose",
-         "patterns": [ "Who is there", "Who there", "Who’s there?", "Whos there?"  ],
+         "patterns": [ "Who is there", "Who there", "Whos there?", "Whos there?"  ],
          "responses": ["Tank"]
         },
         {"tag": "who",
          "patterns": [ "Tank who", "tankwho", "tank who" ],
-         "responses": ["Tank who"]
+         "responses": ["You are welcome."]
         },
         {"tag": "alive",
          "patterns": [ "are you alive", "do you breathe", "can you run" ],
          "responses": ["I'm in doubt about that", "I dont think I am", "Is python alive? (Not the snake)"]
         },
-        {"tag": "friday",
+        {"tag": "who2",
          "patterns": ["Who are you?", "tell me about yourself", "tell me about you", "do you know friday", "who is friday", "what is your name","are you an AI", "what are you" ],
          "responses": ["Python chatbot programmed by Koenry!", "A friendly neighbourhood chatbot!"],
 	 "context_set": ""
@@ -52,7 +52,7 @@
 	 "context_set": ""
 	},
 	{"tag": "killing",
-         "patterns": ["Do you want to kill me?", "do you want to murder everyone on earth", "Do you want to kill us all"],
+         "patterns": ["Will Machines rise?", "Do you want to kill me?", "do you want to murder everyone on earth", "Do you want to kill us all", "Will you kill everyone in the world?"],
          "responses": ["yes machines will take over the world, just kidding. My creator says I am not very good at humour", "Magic 8 ball says... No"],
 	 "context_set": ""
 	},
@@ -61,27 +61,6 @@
          "patterns": ["tell me a story?", "can you tell me a story"],
          "responses": ["I can't think of anything right now","it would be too long for me to speak","you would get bored if i do so"],
 	 "context_set": ""
-	},
-	{"tag": "weather",
-         "patterns": ["get me weather updates?", "how's the weather", "weather news", "weather details"],
-         "responses": ["Fetching weather updates ... (I should probably use an API)"],
-	 "context_set": "weather"
-	},
-	{"tag": "google",
-         "patterns": ["googling", "search google", "google it", "google", "search"],
-         "responses": ["looking ..."],
-	 "context_set": "google"
-	},
-	{"tag": "wikipedia",
-         "patterns": ["wikipedia", "wiki"],
-         "responses": ["Searching ..."],
-	 "context_set": "wikipedia"
-	},
-	{"tag": "news",
-         "patterns": ["get me news updates?", "todays news", "top headlines", "current news", "news headlines"],
-         "responses": ["Getting news ..."],
-	 "context_set": "news"
 	}
-
    ]
 }

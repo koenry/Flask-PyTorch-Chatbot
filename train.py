@@ -1,9 +1,7 @@
-import nltk
-# nltk.download('punkt') # tokenizer package 
+import nltk, json, sqlite3, torch
+nltk.download('punkt') # tokenizer package THIS SHOULD BE COMMENTED OUT AFTER DOWNLOADING!
 from nltk.stem.porter import PorterStemmer
-import json, sqlite3
 import numpy as np
-import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 from main import bagOfWords, tokenize, stem

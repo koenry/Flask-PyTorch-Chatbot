@@ -4,4 +4,3 @@ torch
 flask
 requests
 flask-cors    
-sqlite3

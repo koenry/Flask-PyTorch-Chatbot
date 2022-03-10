@@ -80,14 +80,14 @@ body {
 } 
 
 .bot {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  overflow: hidden; 
   font-family: 'BhuTuka Expanded One', cursive;
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+  white-space: nowrap; 
+  margin-bottom: 50px;
+  letter-spacing: .15em; 
   white-space: initial; 
   animation: type 1s steps(60, end); 
-  
+  color: red;
 }
 
 @keyframes typing {
