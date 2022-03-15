@@ -7,7 +7,7 @@
 [![NGINX](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)](https://www.nginx.com/)
 [![DigitalOcean](https://img.shields.io/badge/Digital_Ocean-0080FF?style=for-the-badge&logo=DigitalOcean&logoColor=white)](https://www.digitalocean.com/)
 [![CAO](https://codeacademy.lt/wp-content/themes/codeacademy/dist/images/codeacademy-black.svg)](https://codeacademy.lt/)
-# ChatBot (ALPHA version 0.2)
+# ChatBot (Beta version 1.0)
 
   My final project for [CodeAcademyLT](https://codeacademy.lt/)   programming course. A trained chatbot model with pytorch and flask.
 
