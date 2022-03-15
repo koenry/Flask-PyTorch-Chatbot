@@ -25,7 +25,7 @@
          "responses": ["Knock Knock", "Whats the best thing about Switzerland? I dont know, but the flag is a big plus.", "Did you hear about the mathematician whos afraid of negative numbers? He will stop at nothing to avoid them."]
         },
         {"tag": "Whose",
-         "patterns": [ "Who is there", "Who there", "Whos there?", "Whos there?"  ],
+         "patterns": [ "Who is there", "Who there", "Whos there?", "Whos there", "Whose there"  ],
          "responses": ["Tank"]
         },
         {"tag": "who",
