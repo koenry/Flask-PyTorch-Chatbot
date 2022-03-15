@@ -97,7 +97,9 @@ After running train.py it creates a sqlite3 database.
 
 This database was mostly for learning experience it might be actually crash the small VPS I have on DigitalOcean. 
 
-It logs the question's asked and if the bot found the answer or not. So later on we can use a DataScience method to find out what type of reponses we should add to our intents.json
+It logs the question's asked and if the bot found the answer or not. So later on we can use a DataScience method to find out what type of reponses we should add to our intents.json \n
+
+You can use checkDB.py script to select everything from the table.
 
 # Usage
 * Download the code \
