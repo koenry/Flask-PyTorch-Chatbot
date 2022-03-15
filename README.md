@@ -97,7 +97,7 @@ After running train.py it creates a sqlite3 database.
 
 This database was mostly for learning experience it might be actually crash the small VPS I have on DigitalOcean. 
 
-It logs the question's asked and if the bot found the answer or not. So later on we can use a DataScience method to find out what type of reponses we should add to our intents.json \n
+It logs the question's asked and if the bot found the answer or not. So later on we can use a DataScience method to find out what type of reponses we should add to our intents.json 
 
 You can use checkDB.py script to select everything from the table.
 
@@ -117,7 +117,7 @@ You can use checkDB.py script to select everything from the table.
 * go to [localhost:5000](http://127.0.0.1:5000/)
 * Start Chatting! 
 
-![eee](https://user-images.githubusercontent.com/68077710/158375318-58f416ca-43b0-48c3-aa2d-4d2ba32ae596.png) \
+![eee](https://user-images.githubusercontent.com/68077710/158375318-58f416ca-43b0-48c3-aa2d-4d2ba32ae596.png) 
 
 
 ### Quick Notes
