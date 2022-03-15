@@ -4,22 +4,26 @@
 [![Numpy](https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
 [![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/en/2.0.x/)
 [![JS](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![NGINX](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)](https://www.nginx.com/)
+[![DigitalOcean](https://img.shields.io/badge/Digital_Ocean-0080FF?style=for-the-badge&logo=DigitalOcean&logoColor=white)](https://www.digitalocean.com/)
 [![CAO](https://codeacademy.lt/wp-content/themes/codeacademy/dist/images/codeacademy-black.svg)](https://codeacademy.lt/)
 # ChatBot (ALPHA version 0.2)
 
   My final project for [CodeAcademyLT](https://codeacademy.lt/)   programming course. A trained chatbot model with pytorch and flask.
 
 # Table of Contents
-1. [The Plan](#The-Plan)
+1. [Plan](#Plan)
 2. [How does it work?](#How-does-it-work)
 3. [The Model](#The-Model)
 4. [Intents](#intents)
 5. [Requirements](#Requirements)
 6. [Usage](#Usage)
-7. [Author Notes](#Author-Notes)
-8. [Future Roadmap](#Future-Roadmap)
+7. [Deployment](#Deployment)
+8. [Author Notes](#Author-Notes)
+9. [Future Roadmap](#Future-Roadmap)
 
-# The Plan:
+# Plan:
 1. Learn various NLP concepts: Stemming, Tokenization, Bag of words
 2. Create train data
 3. Create a pytorch model and train the model
@@ -110,6 +114,19 @@ note: you might need to ```import nltk.download('punkt')``` its a tokenizer pack
 * You can always use your own intents.json and run train.py (just delete the data pickle file from the root folder if you ran train.py )
 * This is an open source project so you can use it anywhere you want \
 
+# Deployment
+I have created a Docker image for this app to deploy to DigitalOcean. The image can be found here: https://hub.docker.com/r/koenry/chatbot \
+I have used NGINX for a reverse proxy. \
+This was my first time trying to deploy an app to Docker. I have learned quite a bit about nginx and docker while preparing the image.
+
+### Docker Instructions
+* use docker pull koenry/chatbot to get the image 
+* docker run -dt -p 80:80 -p 5000:5000 --name NAME koenry/chatbot      -- to create a process
+* docker exec -it NAME bash      -- to get into the container
+* Inside the contained start chatbot.ini and nginx:  systemctl restart nginx && systemctl restart chatbot
+* Enter your server IP to your browser
+
+
 # Author Notes
 *I Learned the proper way how to import functions and not use one .py file for everything 
 * One of the best helping hand was: ```I Learned that  Everything in python is considered as object so functions are also objects.``` So you can use this method as well.
@@ -121,11 +138,5 @@ Lets say chat.answerBot = 'ok' and when I import the function I can easily call 
 # Future Roadmap
 
 * update intents.json
-* dockerimage for back-end server
-* try out a front-end framework like react or angular
-* make the front-end responsive and more user friendly
-* add duckduckgo API functions so the chatbot always has an answer to a question or statement
-* add a database -  log user coldtime 
-* Make the bot understadn 'leet talk'  ex.: H3ll0
-* Remove jquery cdn from html :D
+* Implement Jenkins/GithubActions for CD/CI 
 * Try  implementing sentiment analysis
