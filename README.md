@@ -17,10 +17,11 @@
 3. [The Model](#The-Model)
 4. [Intents](#intents)
 5. [Requirements](#Requirements)
-6. [Usage](#Usage)
-7. [Deployment](#Deployment)
-8. [Author Notes](#Author-Notes)
-9. [Future Roadmap](#Future-Roadmap)
+6. [Database](#Database)
+7. [Usage](#Usage)
+8. [Deployment](#Deployment)
+9. [Author Notes](#Author-Notes)
+10. [Future Roadmap](#Future-Roadmap)
 
 # Plan:
 1. Learn various NLP concepts: Stemming, Tokenization, Bag of words
@@ -90,6 +91,13 @@ If the user types in 'Keanu Reeves' it gives us a summary that its an actor. So 
 ```pip install flask-cors``` \
 ```pip install requests``` \
 note: you might need to ```import nltk.download('punkt')``` its a tokenizer package inside train.py, its commented out but you might need it to manually* download it you need to run it only once. *By mnually I mean to uncomment and run the train data once afterwards you can comment it out.
+
+# Database 
+After running train.py it creates a sqlite3 database.  \
+
+This database was mostly for learning experience it might be actually crash the small VPS I have on DigitalOcean. \
+
+It logs the question's asked and if the bot found the answer or not. So later on we can use a DataScience method to find out what type of reponses we should add to our intents.json
 
 # Usage
 * Download the code \
