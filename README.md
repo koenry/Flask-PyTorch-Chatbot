@@ -115,9 +115,10 @@ You can use checkDB.py script to select everything from the table.
  ![image](https://user-images.githubusercontent.com/68077710/149461870-428c4bf5-f3b0-4568-9589-915afc1827e1.png)
 
 * go to [localhost:5000](http://127.0.0.1:5000/)
-* Start Typing! \
-![image](https://user-images.githubusercontent.com/68077710/149461951-b7b1e300-d359-4866-a21a-1fd3b07045d4.png) \
-```p.s. the front-end design is still in early alpha```
+* Start Chatting! 
+
+![eee](https://user-images.githubusercontent.com/68077710/158375318-58f416ca-43b0-48c3-aa2d-4d2ba32ae596.png) \
+
 
 ### Quick Notes
 * You can always use your own intents.json and run train.py (just delete the data pickle file from the root folder if you ran train.py )
