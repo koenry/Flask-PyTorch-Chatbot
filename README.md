@@ -53,7 +53,7 @@ tokenization => 'is' 'anYone' ''thErE' '?' \
 stemming => 'is' 'anYon' 'thErE' '?' \
 lower all words => 'is' 'anyon' 'there' '?' \
 exclude special characters => 'is' 'anyon' 'there' \
-bag of words (intents.json) =>  ```'is' 'anyon' 'there'```        intents.json``` 'are you there' 'is anyone here' ```  \
+bag of words (intents.json) =>  ```'is' 'anyon' 'there'```        intents.json``` 'are you there' 'is anyone here' ```  
 
 | bag of words    | input           | probabilities  |
 | ------------- |:-------------:| -----:|
@@ -76,7 +76,7 @@ bag of words (intents.json) =>  ```'is' 'anyon' 'there'```        intents.json``
 
 ```tags``` is the subject \
 ```patterns``` This is where the bot searches for patterns \
-```responses``` This is how the bot will response using random module so its not the same response \
+```responses``` This is how the bot will response using random module so its not the same response 
 
 
 ### We get the x  vector and it calculates which 'tag' is correct is it a greeting? a goodbye? a specific question?
@@ -93,9 +93,9 @@ If the user types in 'Keanu Reeves' it gives us a summary that its an actor. So 
 note: you might need to ```import nltk.download('punkt')``` its a tokenizer package inside train.py, its commented out but you might need it to manually* download it you need to run it only once. *By mnually I mean to uncomment and run the train data once afterwards you can comment it out.
 
 # Database 
-After running train.py it creates a sqlite3 database.  \
+After running train.py it creates a sqlite3 database.  
 
-This database was mostly for learning experience it might be actually crash the small VPS I have on DigitalOcean. \
+This database was mostly for learning experience it might be actually crash the small VPS I have on DigitalOcean. 
 
 It logs the question's asked and if the bot found the answer or not. So later on we can use a DataScience method to find out what type of reponses we should add to our intents.json
 
@@ -119,7 +119,7 @@ It logs the question's asked and if the bot found the answer or not. So later on
 
 ### Quick Notes
 * You can always use your own intents.json and run train.py (just delete the data pickle file from the root folder if you ran train.py )
-* This is an open source project so you can use it anywhere you want \
+* This is an open source project so you can use it anywhere you want 
 
 # Deployment
 I have created a Docker image for this app to deploy to DigitalOcean. The image can be found here: https://hub.docker.com/r/koenry/chatbot \
